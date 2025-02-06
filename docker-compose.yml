@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: "."
+    networks:
+      - code-net
+    volumes:
+      - ./db.db:/usr/src/app/db.db:rw
+
+networks:
+  code-net:
+    driver: bridge
